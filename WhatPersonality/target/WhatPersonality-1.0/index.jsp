@@ -39,7 +39,7 @@
                     <h4>When you are ready to begin, click NEXT.</h4>
                 </div>
             </div>
-            <a class="btn btn-primary pull-right" href="next?action=beginDISC">NEXT</a>
+            <a class="btn btn-primary pull-right" href="Next?action=beginDISC">NEXT</a>
         </div>
     </body>
 </html>
