@@ -34,15 +34,13 @@ public class Next extends HttpServlet {
           throws ServletException, IOException {
     
     ServletContext sc = getServletContext();
-    String url;
+ 
     //get current action
     String action = request.getParameter("action");
-    if (action.equals("beginDISC")){     
-      url="/personality-questions.jsp";
-      response.sendRedirect(url);
-    } else {
-      url="/index.jsp";
-      response.sendRedirect(url);
+    if (action.equals("beginDISC")){           
+      response.sendRedirect("personality-questions.jsp");
+    } else {      
+      response.sendRedirect("index.jsp");
     }
     
   }
