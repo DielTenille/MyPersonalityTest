@@ -88,7 +88,7 @@
                     <h3>Share</h3>
                     <a class="btn btn-primary" href="next?action=Facebook">Email My Report</a>
                     <a class="btn btn-primary" href="next?action=Facebook">Print My Report</a>
-                    <a class="btn btn-primary" href="next?action=Facebook">Post My Report To FaceBook</a>
+                    <a class="btn btn-primary" href="FacebookSignIn">Post My Report To FaceBook</a>
                 </div>
             </div>
         </div>

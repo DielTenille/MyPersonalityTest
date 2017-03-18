@@ -1,5 +1,5 @@
-model/DiscScore.class
-model/Questions.class
-Model/Question.class
-Controller/Next.class
-Controller/Selections.class
+Controller\FacebookSignIn.class
+Controller\Next.class
+Controller\Selections.class
+Model\Question.class
+Controller\FBCallBack.class
