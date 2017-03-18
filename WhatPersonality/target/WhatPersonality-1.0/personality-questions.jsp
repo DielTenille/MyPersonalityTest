@@ -36,13 +36,15 @@
 
                     <h2>Most Like Me</h2>
                     <ul id="sortable">
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 1</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 2</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 3</li>
-                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>Item 4</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>${options[0]}</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>${options[1]}</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>${options[2]}</li>
+                        <li class="ui-state-default"><span class="ui-icon ui-icon-arrowthick-2-n-s"></span>${options[3]}</li>
                     </ul>
 
                     <h2>Least Like Me</h2>
+                    <h3>Question ${pageNumber} of 10</h3>
+                    <a class="btn btn-primary pull-right" href="Next?action=next">NEXT</a>
                 </div>
             </div>
 

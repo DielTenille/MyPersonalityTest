@@ -3,10 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package cs313.group6.whatpersonality;
+package Controller;
 
+import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
+import java.util.Scanner;
+// import javax.persistence.criteria.Selection;
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -21,6 +25,10 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(name = "Next", urlPatterns = {"/Next"})
 public class Next extends HttpServlet {
 
+  // Will use to display how many questions have been answered
+  private static int pageNumber;
+  private static Selections mySelection;
+
   /**
    * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
    * methods.
@@ -32,19 +40,65 @@ public class Next extends HttpServlet {
    */
   protected void processRequest(HttpServletRequest request, HttpServletResponse response)
           throws ServletException, IOException {
-    
-    ServletContext sc = getServletContext();
-    String url;
-    //get current action
+    // Create variable to store redirect url and default url
+    String url = "/index.jsp";
+
+    // get current action
     String action = request.getParameter("action");
-    if (action.equals("beginDISC")){     
-      url="/personality-questions.jsp";
-      response.sendRedirect(url);
-    } else {
-      url="/index.jsp";
-      response.sendRedirect(url);
+    if (action == null) {
+      action = "begin";
+      url = "/index.jsp";
     }
-    
+
+    // Perform action and set URL to appropriate page
+    if (action.equals("beginDISC")) {
+      url = "/personality-questions.jsp";
+
+      // Set initial page number
+      pageNumber = 1;
+
+      String root = getServletContext().getRealPath("/");
+      mySelection = new Selections();
+      mySelection.loadQuestions(root + "/WEB-INF/data.txt");
+      request.getSession().setAttribute("pageNumber", pageNumber);
+
+      mySelection.getQuestion().resetScores();
+      // Get nth options and randomize
+      mySelection.first();
+      // mySelection.getQuestion();
+      String[] options = mySelection.getQuestion().getWordsRandom();
+
+      // Store options in Session Variable
+      request.getSession().setAttribute("options", options);
+
+      getServletContext().getRequestDispatcher(url).forward(request, response);
+    } else if (action.equals("next")) {
+      url = "/personality-questions.jsp";
+      String choices[] = (String[])request.getSession().getAttribute("options");
+      mySelection.getQuestion().addScore(choices);
+      pageNumber += 1;
+
+      if (mySelection.hasNext()) {
+        mySelection.next();
+        // Get nth options and randomize
+        String[] options = mySelection.getQuestion().getWordsRandom();
+
+        // Store options in Session Variable
+        request.getSession().setAttribute("options", options);
+
+        request.getSession().setAttribute("pageNumber", pageNumber);
+
+        getServletContext().getRequestDispatcher(url).forward(request, response);
+      } else {
+        url = "/Report.jsp";
+
+        String report = mySelection.getQuestion().getScores();
+        request.getSession().setAttribute("report", report);
+
+        getServletContext().getRequestDispatcher(url).forward(request, response);
+      }
+    }
+
   }
 
   // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

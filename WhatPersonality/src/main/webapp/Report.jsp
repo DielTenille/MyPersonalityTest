@@ -19,10 +19,7 @@
             </div>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
-                    ${trait1}
-                    ${trait2}
-                    ${trait3}
-                    ${trait4}
+                    ${report}
 
                 </div>
             </div>
