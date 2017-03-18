@@ -59,7 +59,7 @@ public class Next extends HttpServlet {
 
       String root = getServletContext().getRealPath("/");
       mySelection = new Selections();
-      mySelection.loadQuestions(root + "/WEB-INF/data.txt");
+      mySelection.loadQuestions();
       request.getSession().setAttribute("pageNumber", pageNumber);
 
       mySelection.getQuestion().resetScores();
