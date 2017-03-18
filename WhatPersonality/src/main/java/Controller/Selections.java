@@ -5,7 +5,7 @@
  */
 package Controller;
 
-import model.Question;
+import Model.Question;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.sql.*;

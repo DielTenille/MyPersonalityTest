@@ -1,5 +1,5 @@
-model\Question.class
-Controller\Next.class
-model\DiscScore.class
-model\Questions.class
-Controller\Selections.class
+model/DiscScore.class
+model/Questions.class
+Model/Question.class
+Controller/Next.class
+Controller/Selections.class
