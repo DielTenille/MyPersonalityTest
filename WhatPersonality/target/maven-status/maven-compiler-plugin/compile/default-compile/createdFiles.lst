@@ -1,5 +1,5 @@
-Controller\FacebookSignIn.class
-Controller\Next.class
-Controller\Selections.class
-Model\Question.class
-Controller\FBCallBack.class
+Controller/Selections.class
+Controller/FBCallBack.class
+Controller/FacebookSignIn.class
+Model/Question.class
+Controller/Next.class

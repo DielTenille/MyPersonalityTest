@@ -33,7 +33,7 @@ public class FBCallBack extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       Facebook facebook = (Facebook)request.getSession().getAttribute("facebook");
+       /*Facebook facebook = (Facebook)request.getSession().getAttribute("facebook");
 
         String oauthCode = request.getParameter("code");
 
@@ -42,7 +42,7 @@ public class FBCallBack extends HttpServlet {
         } catch (FacebookException e) { 
              e.printStackTrace(); 
         } 
-        response.sendRedirect("welcome.jsp"); 
+        response.sendRedirect("welcome.jsp");*/ 
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -57,7 +57,15 @@ public class FBCallBack extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        Facebook facebook = (Facebook) request.getSession().getAttribute("facebook");
+        String oauthCode = request.getParameter("code");
+        try {
+            facebook.getOAuthAccessToken(oauthCode);
+        } catch (FacebookException e) {
+            throw new ServletException(e);
+        }
+        response.sendRedirect(request.getContextPath() + "/");
     }
 
     /**
