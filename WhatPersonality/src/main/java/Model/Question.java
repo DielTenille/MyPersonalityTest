@@ -76,8 +76,8 @@ public class Question {
         return result;
     }
     
+    //identify type with highest score
     public static String getType() {
-//        int[] array = new int[4];
         int highestScore = 0;
         int highestTag = 0;
         for (int i = 0; i < tags.length; i++) {
@@ -86,9 +86,7 @@ public class Question {
                 highestTag = i;
             }
             
-//            array[i] = (int)score.get(tags[i]);
         }
-//        Arrays.sort(array);
         
         return tags[highestTag];
     }

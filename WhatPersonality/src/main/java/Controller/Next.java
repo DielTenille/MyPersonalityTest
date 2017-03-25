@@ -95,6 +95,7 @@ public class Next extends HttpServlet {
         String report = mySelection.getQuestion().getScores();
         request.getSession().setAttribute("report", report);
         
+        //save text of type with highest score into session as topType
         String topType = mySelection.getQuestion().getType();
         request.getSession().setAttribute("topType", topType);
 
