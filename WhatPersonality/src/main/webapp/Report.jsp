@@ -13,6 +13,7 @@
         <title>My Personality Type | CS313 Group 6</title>
     </head>
     <body>
+        
         <div class="container">
             <div class="jumbotron text-center">
                 <h1>And your personality type is...</h1>
@@ -86,9 +87,12 @@
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <h3>Share</h3>
-                    <a class="btn btn-primary" href="next?action=Facebook">Email My Report</a>
-                    <a class="btn btn-primary" href="next?action=Facebook">Print My Report</a>
                     <a class="btn btn-primary" href="FacebookSignIn">Post My Report To FaceBook</a>
+                    <div class="row">
+                    <div class="col-sm-12 col-sm-offset-1 text-center">
+               
+                    </div>
+                </div>
                 </div>
             </div>
         </div>
