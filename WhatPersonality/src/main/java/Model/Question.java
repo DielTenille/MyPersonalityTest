@@ -69,9 +69,28 @@ public class Question {
     
     public static String getScores()
     { String result = "Your Personality Type Breakdown:<br>";
+      
         for (int i = 0; i < tags.length; i++) {
             result += "<br>" + tags[i] + ": " +score.get(tags[i]) + "%";            
         }
         return result;
     }
+    
+    public static String getType() {
+//        int[] array = new int[4];
+        int highestScore = 0;
+        int highestTag = 0;
+        for (int i = 0; i < tags.length; i++) {
+            if ((int)score.get(tags[i]) > highestScore) {
+                highestScore = (int)score.get(tags[i]);
+                highestTag = i;
+            }
+            
+//            array[i] = (int)score.get(tags[i]);
+        }
+//        Arrays.sort(array);
+        
+        return tags[highestTag];
+    }
+    
 }

@@ -28,7 +28,7 @@
     <body>
         <div class="container">
             <div class="jumbotron text-center">
-                <h1>Question ${quesionNumber} of 10</h1>
+                <h1>Question ${pageNumber} of 10</h1>
             </div>
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
@@ -43,7 +43,6 @@
                     </ul>
 
                     <h2>Least Like Me</h2>
-                    <h3>Question ${pageNumber} of 10</h3>
                     <a class="btn btn-primary pull-right" href="Next?action=next">NEXT</a>
                 </div>
             </div>

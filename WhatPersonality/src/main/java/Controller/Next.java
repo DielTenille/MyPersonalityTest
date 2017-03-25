@@ -94,6 +94,9 @@ public class Next extends HttpServlet {
 
         String report = mySelection.getQuestion().getScores();
         request.getSession().setAttribute("report", report);
+        
+        String topType = mySelection.getQuestion().getType();
+        request.getSession().setAttribute("topType", topType);
 
         getServletContext().getRequestDispatcher(url).forward(request, response);
       }
