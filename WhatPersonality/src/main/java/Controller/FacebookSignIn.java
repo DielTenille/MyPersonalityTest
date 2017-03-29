@@ -34,8 +34,6 @@ public class FacebookSignIn extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         
-        String accessToken = "EAACEdEose0cBAMOylS88RwSyqRd0NGz3Ji7nDECOcNEwN608SivMXEZBZC3ZAroxOWWDB4SVPQTEgtng6EwLhkWSaJp65dZAfKWqLRjifUG1fhSo9E3SECCZAk9DrW79XDx3ZByTg3Rf79leAm5M2nZAT585iQIp3kDFy126QntgvP5ZAJ6tn9lk1EioFuZANuAkZD";
-        
         Facebook facebook = new FacebookFactory().getInstance();
 
         request.getSession().setAttribute("facebook", facebook);
@@ -62,13 +60,7 @@ public class FacebookSignIn extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        Facebook facebook = new FacebookFactory().getInstance();
-        request.getSession().setAttribute("facebook", facebook);
-        StringBuffer callbackURL = request.getRequestURL();
-        int index = callbackURL.lastIndexOf("/");
-        callbackURL.replace(index, callbackURL.length(), "").append("/callback");
-        response.sendRedirect(facebook.getOAuthAuthorizationURL(callbackURL.toString()));
+        processRequest(request, response);
     }
 
     /**
