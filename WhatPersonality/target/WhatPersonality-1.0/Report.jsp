@@ -87,7 +87,7 @@
             <div class="row">
                 <div class="col-sm-10 col-sm-offset-1">
                     <h3>Share</h3>
-                    <a class="btn btn-primary" href="FacebookSignIn">Share My Report To FaceBook</a>
+                    <a class="btn btn-primary" href="FacebookSignIn">Sign In To FaceBook to Share</a>
                     <div class="row">
                     <div class="col-sm-12 col-sm-offset-1 text-center">
                

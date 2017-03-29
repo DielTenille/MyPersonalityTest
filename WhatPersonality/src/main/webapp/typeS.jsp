@@ -42,7 +42,7 @@
           </div>
         </div>
       </div>
-      <a class="btn btn-primary pull-right" href="Next?action=beginDISC">NEXT</a>
+      <a class="btn btn-primary pull-right" href="PostResults">Share on Facebook</a>
     </div>
   </body>
 </html>

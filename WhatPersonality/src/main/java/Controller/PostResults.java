@@ -36,8 +36,28 @@ public class PostResults extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        PostUpdate post = new PostUpdate(new URL("URL of our app"))
-                .picture(new URL("URL of the picture we want to display"))
+        String postImg;
+        String sharedImg = (String)request.getSession().getAttribute("topType");
+        switch (sharedImg) {
+            case "Dominant":
+                postImg = "/Resources/D-Personality-Style.PNG";
+                break;
+            case "Influencer":
+                postImg = "/Resources/I-Personality-Style.PNG";
+                break;
+            case "Sensitive":
+                postImg = "/Resources/S-Personality-Style.PNG";
+                break;
+            case "Compliant":
+                postImg = "/Resources/C-Personality-Style.PNG";
+                break;
+            default:
+                postImg = "/Resources/313ScreenShot.PNG";
+                break;
+        }
+        
+        PostUpdate post = new PostUpdate(new URL("https://glacial-fortress-25541.herokuapp.com/"))
+                .picture(new URL("http://localhost:8080/" + request.getContextPath()+ postImg))
                 .name("What is your personality - A test by group 6")
                 .caption("personalitytest.com")
                 .description("A personality test that can be posted on facebook");
@@ -48,7 +68,7 @@ public class PostResults extends HttpServlet {
         } catch (FacebookException e) {
             throw new ServletException(e);
         }
-        response.sendRedirect(request.getContextPath()+ "/");
+        response.sendRedirect("thankYou.jsp");
     
     }
 
