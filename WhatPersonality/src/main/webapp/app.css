@@ -1,0 +1,78 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 24, 2017, 2:21:51 PM
+    Author     : landon
+*/
+body{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+div.header{
+    width: 100%;
+    margin-bottom: 50px;
+    
+}
+div.right{
+    float: left;
+}
+
+div.left{
+    float: left;
+}
+
+div.selector{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+div.screenShot{
+    
+}
+
+
+div.launch{
+    margin-left: 100px;
+    margin-top: 20px;
+}
+
+div.description{
+    margin-left: 100px;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    height: 250px;
+    width: 500px;
+}
+
+div.additionalInfo{
+    margin-left: 100px;
+    margin-top: 20px;
+    width: 400px;
+    height: 250px;
+}
+
+
+.button {
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    border-radius: 8px;
+    background-color: #4CAF50; 
+    color: white; 
+}
+
+.button:hover {
+    background-color: white; /* Green */
+    color: black;
+    border: 2px solid #4CAF50;
+}
+button#launch{
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    background-color: #4CAF50; 
+    color: white; 
+    font-size: 150%;
+}
