@@ -37,14 +37,14 @@ public class FBCallBack extends HttpServlet {
 
         String oauthCode = request.getParameter("code");
         
-        String var = (String)request.getSession().getAttribute("topType");
+        String page = (String)request.getSession().getAttribute("topType");
 
         try {
             facebook.getOAuthAccessToken(oauthCode);
         } catch (FacebookException e) {
             e.printStackTrace();
         }
-        switch (var) {
+        switch (page) {
             case "Dominant":
                 response.sendRedirect("typeD.jsp");
                 break;

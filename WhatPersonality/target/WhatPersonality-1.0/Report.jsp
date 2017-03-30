@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"  %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -13,15 +14,17 @@
         <title>My Personality Type | CS313 Group 6</title>
     </head>
     <body>
-        
+
         <div class="container">
             <div class="jumbotron text-center">
+                <a class="btn btn-success pull-right" href="intro.jsp">Home</a>
                 <h1>And your personality type is...${topType}</h1>
             </div>
             <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    ${report}
-
+                <div class="col-sm-10 col-sm-offset-1 text-center">
+                    <c:forEach var="result" items="${report}">
+                        <h3 class="text-uppercase">${result}</h3>
+                    </c:forEach> 
                 </div>
             </div>
             <div class="row">
@@ -84,17 +87,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-10 col-sm-offset-1">
-                    <h3>Share</h3>
-                    <a class="btn btn-primary" href="FacebookSignIn">Sign In To FaceBook to Share</a>
-                    <div class="row">
-                    <div class="col-sm-12 col-sm-offset-1 text-center">
-               
-                    </div>
-                </div>
-                </div>
-            </div>
+            <a class="btn btn-primary pull-right" href="FacebookSignIn">Sign In To FaceBook to Share</a>
         </div>
     </body>
 </html>

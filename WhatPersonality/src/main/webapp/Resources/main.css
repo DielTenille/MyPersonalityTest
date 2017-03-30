@@ -1,0 +1,27 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Mar 29, 2017, 7:53:14 PM
+    Author     : t2alaska
+*/
+.main-img {
+     width: 100%; 
+     padding-top: 25%;
+}
+hr {
+    height: 10px; 
+    border: 0; 
+    box-shadow: 0 10px 10px -10px #8c8b8b inset;
+}
+#sortable li {
+    border: 3px solid #286090;
+    color: #FFF;
+    font-size: 1.5em;
+    list-style-type: none;
+    margin: 3%;
+    padding: 4%;
+    border-radius: 8px;
+}

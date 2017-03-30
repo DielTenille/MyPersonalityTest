@@ -13,7 +13,37 @@
         <title>Thank You</title>
     </head>
     <body>
-        <h1>Thank you for sharing on Facebook!</h1>
-        <img src="Resources/C.png">
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>Thank you!</h1>
+                <h2>Your Results Were Shared on Facebook!</h2>
+                <div class="row">
+                    <div class="col-sm-12">
+                        <hr style="height: 10px; border: 0; box-shadow: 0 10px 10px -10px #8c8b8b inset;">
+                        <a class="btn btn-primary btn-lg" href="intro.jsp">Take Test Again!</a>
+                    </div>
+                </div>   
+            </div>
+            <div class="row">
+                <div class="col-sm-10 col-sm-offset-1"> 
+
+                    <div class="col-sm-12">
+
+                        <div class="col-sm-3 pull-left">
+                            <img class="img-circle" src="Resources/D.png" style="width: 100%; padding-top: 25%;"/>
+                        </div>
+                        <div class="col-sm-3 pull-left">
+                            <img class="img-circle" src="Resources/I.png" style="width: 100%; padding-top: 25%;"/>
+                        </div>
+                        <div class="col-sm-3 pull-left">
+                            <img class="img-circle" src="Resources/S.png" style="width: 100%; padding-top: 25%;"/>
+                        </div>
+                        <div class="col-sm-3 pull-left">
+                            <img class="img-circle" src="Resources/C.png" style="width: 100%; padding-top: 25%;"/>
+                        </div>                                
+                    </div>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
