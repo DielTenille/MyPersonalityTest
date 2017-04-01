@@ -14,7 +14,8 @@
         <link rel="stylesheet" type="text/css" href="Resources/app.css">
     </head>
     <body>
-        <div class="header">
+        <div class="container-fluid">
+            <div class="jumbotron text-center">
         <h1>What Personality 1.2</h1>
         </div>
         <div class="left">
@@ -38,6 +39,7 @@
         </div>
         <div class="additionalInfo">
             <h3>Additional Info: </h3> <p>Created by:</p><p>Andre Nell</p><p>Aubrey Raby</p><p>Tenille D.</p><p>Bud Wortham</p><p>Cesear de Leon</p><p>Landon Mecham</p>
+        </div>
         </div>
         </div>
         
